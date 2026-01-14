@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>This is the title</title>
+    <script>
+        let date = new Date();
+        //1
+        console.log(date.getFullYear()); // год
+        console.log(date.getMonth());    // месяц
+        console.log(date.getDate());     // день
+        console.log(date.getHours());    // часы
+        console.log(date.getMinutes());  // минуты
+        console.log(date.getSeconds());
+        //2
+        function addZero(num) {
+            if (num >= 0 && num <= 9) {
+                return '0' + num;
+            } else {
+                return num;
+            }
+        }
+        console.log(
+            addZero(date.getHours()) + ':' +
+            addZero(date.getMinutes()) + ':' +
+            addZero(date.getSeconds()) + ' ' +
+            addZero(date.getFullYear()) + '.' +
+            addZero(date.getMonth() + 1) + '.' +
+            addZero(date.getDate())
+        );
+        //3
+        let str = '2025-12-31';
+        let res = str.split('-').reverse().join('.');
+        console.log(res);
+        //4
+        if (!date.getDate == 1 || 7) {
+            console.log(date.getDay() + ". Рабочий. Выходной через: " + (5 - date.getDay()));
+        } else { " Выходной" };
+        //5
+        let month = date.getMonth();
+        let months = [
+            'янв', 'фев', 'мар',
+            'апр', 'май', 'июн',
+            'июл', 'авг', 'сен',
+            'окт', 'ноя', 'дек'
+        ];
+        console.log(months[month]);
+        //6
+        let date6 = new Date(2025,
+            10, 5, 12, 59, 59);
+        let day = date.getDay();
+        let days = ['вс', 'пн',
+            'вт', 'ср', 'чт', 'пт',
+            'сб'];
+        console.log(days[day]);
+        //7
+        let date7 = new Date(2025,
+            1, 1);
+        console.log(date.getTime());
+        //8
+        let date8_0 = new Date(1988, 3, 1);
+        let date8_1 = new Date(2000, 1, 10);
+        let diff = date8_1.getTime() - date8_0.getTime();
+        let diff2 = date.getTime() - date8_1.getTime();
+        console.log(diff / (1000 * 60 * 60));
+        console.log(diff2 / (1000 * 60 * 60 * 24 * 30));
+        //9
+        let date9_0 = new Date(2000, 9, 1);
+        let date9_1 = new Date(2010, 2, 15);
+        let diff9 = date9_1 - date9_0;
+        console.log(diff9 + "(" + (diff9 / (1000 * 60 * 60 * 24)) + " days)" + "(" + (diff9 / (1000 * 60 * 60 * 24 * 30)) + " months)" + "(" + (diff9 / (1000 * 60 * 60 * 24 * 364)) + " years)");
+        //10
+        let date10_1 = new Date(2018,
+            1, 35);
+        console.log(date);
+        let date10_2 = new Date(2018,
+            15, 1);
+        console.log(date);
+        let date10_3 = new Date(2018,
+            3, 31);
+        console.log(date);
+        let date10_4 = new Date(2018,
+            1, 31);
+        console.log(date);
+        let date10_5 = new Date(2018,
+            12, 33);
+        console.log(date);
+        let date10_6 = new Date(2018,
+            33, 33);
+        console.log(date);
+        let date10_7 = new Date(2018, 5, 0);
+        console.log(date);
+        let date10_8 = new Date(2018, 0, 0);
+        console.log(date);
+        let date10_9 = new Date(2018,
+            -12, -33);
+        console.log(date);
+        let date10_10 = new Date(2018,
+            0, 1, 23, 0, 60);
+        console.log(date);
+        let date10_11 = new Date(2018,
+            0, 1, 23, 60, 0);
+        console.log(date);
+        let date10_12 = new Date(2018,
+            0, 1, 100, 100, 100);
+        console.log(date);
+        //11
+        let date11 = new Date(2020, 3, 0);
+        console.log(date11.getDate());
+        let date11_2 = new Date(2025, 5, 0);
+        console.log(date11_2.getDate());
+        //12
+    </script>
+</head>
+
+<body>
+    Ctrl+Shift+I
+</body>
+
+</html>
